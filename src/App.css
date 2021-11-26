@@ -1,42 +1,95 @@
-.App {
-  text-align: center;
+:root {
+  --primary: #f34213;
+  --background: #2e2e3a;
+  --grey: #bbb8b2;
+  --green: #04724d;
+  --purple: #9883e5;
+
+  --font-primary: 'Orbitron', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-secondary);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.app {
+  background-color: var(--grey);
+  color: var(--green);
   min-height: 100vh;
+}
+
+.header {
+  background-color: var(--background);
+  color: var(--primary);
+  font-size: xx-large;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+h1 {
+  font-family: var(--font-primary);
+  font-weight: bold;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
 }
